@@ -1,0 +1,120 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="NewApi">
+
+    <style name="Theme.CD.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="actionBarIconColor">#fff</item>
+        <item name="actionBarInsetStart">@dimen/keyline_2_minus_16dp</item>
+        <item name="homeAsUpIndicator">@drawable/ic_arrow_back_white_24dp</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="cardItemForeground">?android:selectableItemBackground</item>
+        <item name="cardItemForegroundBorderless">?android:selectableItemBackground</item>
+        <item name="android:editTextStyle">@style/Widget.CD.EditText</item>
+
+        <!-- You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight, and colorSwitchThumbNormal. -->
+
+        <item name="android:textColorLink">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+
+        <!-- Change default text colour from dark grey to black -->
+        <item name="android:textColor">@android:color/black</item>
+
+        <item name="searchViewStyle">@style/MySearchViewStyle</item>
+
+    </style>
+
+
+    <style name="ActionBar.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Theme.CD.Material" parent="Theme.CD.Base">
+        <item name="actionBarInsetStart">@dimen/keyline_1_minus_8dp</item>
+    </style>
+
+    <style name="HeaderBar">
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+
+    <style name="ActionBarThemeOverlay" parent="">
+        <item name="android:textColorPrimary">#fff</item>
+        <item name="colorControlNormal">?actionBarIconColor</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDark</item>
+    </style>
+
+
+    <style name="price_text_view">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/gray_color</item>
+    </style>
+
+    <style name="zoom_dialog" parent="Theme.CD.Material">
+        <!--item name="android:windowFrame">@null</item-->
+        <!--item name="android:windowOverscan">false</item-->
+        <item name="android:windowBackground">@android:drawable/screen_background_dark_transparent
+        </item>
+    </style>
+
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+
+    <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!-- Background for the search query section (e.g. EditText) -->
+        <!--item name="queryBackground"></item-->
+        <!-- Background for the actions section (e.g. voice, submit) -->
+        <!--item name="submitBackground"></item-->
+        <!-- Close button icon -->
+        <item name="closeIcon">@drawable/ic_close_white_18dp</item>
+        <!-- Search button icon -->
+        <item name="searchIcon">@drawable/ic_search_white_18dp</item>
+        <!-- Go/commit button icon -->
+        <!--item name="goIcon"></item-->
+        <!-- Voice search button icon -->
+        <!--item name="voiceIcon">...</item-->
+        <!-- Commit icon shown in the query suggestion row -->
+        <!--item name="commitIcon">...</item-->
+        <!-- Layout for query suggestion rows -->
+    </style>
+
+
+    <style name="Widget.CD.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <style name="ActionBar.DetailTitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <style name="ActionBar.DetailHeadingText" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>
