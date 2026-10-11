@@ -24,6 +24,7 @@ public class MainActivity extends BaseActivity
 			ConnectionCallbacks,
 			OnConnectionFailedListener {
 
+	private static final String TAG = "MainActivity";
 	private static final int PERMISSION_REQUEST_LOCATION = 90;
 	private View mLayout;
 	private GoogleApiClient mGoogleApiClient;
@@ -32,6 +33,8 @@ public class MainActivity extends BaseActivity
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Log.d(TAG, "onCreate: savedInstanceState "
+				+ (savedInstanceState == null ? "is null" : "present"));
 		setContentView(R.layout.activity_main);
 		mLayout = findViewById(R.id.main_content);
 		setUpToolbar();
@@ -47,6 +50,7 @@ public class MainActivity extends BaseActivity
 	public void onRequestPermissionsResult(int requestCode,
 			String[] permissions, int[] grantResults) {
 		if (requestCode == PERMISSION_REQUEST_LOCATION) {
+			Log.d(TAG, "onRequestPermissionsResult: location permission result received");
 			if (grantResults.length == 1
 					&& grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 				Snackbar.make(mLayout,
@@ -76,6 +80,7 @@ public class MainActivity extends BaseActivity
 	}
 
 	private void requestLocationPermission() {
+		Log.d(TAG, "requestLocationPermission: requesting ACCESS_FINE_LOCATION");
 		if (ActivityCompat.shouldShowRequestPermissionRationale(this,
 				permission.ACCESS_FINE_LOCATION)) {
 			Snackbar.make(mLayout,
@@ -130,6 +135,7 @@ public class MainActivity extends BaseActivity
 
 	@Override
 	public void onConnected(@Nullable Bundle bundle) {
+		Log.d(TAG, "onConnected: GoogleApiClient connected");
 		getLastKnowLocation();
 	}
 
@@ -148,6 +154,7 @@ public class MainActivity extends BaseActivity
 
 	@Override
 	public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+		Log.d(TAG, "onConnectionFailed: " + connectionResult);
 
 	}
 }
